@@ -1,0 +1,79 @@
+:root {
+  /* Colors */
+  --pure-black: #000000;
+  --pure-white: #FFFFFF;
+  --accent-coral: #FFBE98;
+  --grey-opacity: rgba(0, 0, 0, 0.65);
+
+  /* Font sizes */
+  --large-header-size: 116px;
+  --medium-header-size: 80px;
+  --accent-text-size: 35px;
+  --accent-text-form-size: 26px;
+  --body-text-size: 17px;
+  --line-height-body: 30px;
+
+  /* Font families */
+  --large-medium-header-font: 'PF Marlet Display', sans-serif;
+  --accent-text-font: 'Playfair Display', serif;
+  --body-text-font: 'Apercu', sans-serif;
+}
+
+.large-header, .medium-header {
+  font-family: var(--large-medium-header-font);
+  font-weight: 400;
+  font-size: var(--large-header-size);
+  color: var(--pure-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Large Headers */
+.large-header {
+  font-family: var(--large-medium-header-font);
+  font-weight: 100; /* Assuming light */
+  font-size: var(--large-header-size);
+  color: var(--pure-black);
+}
+
+/* Medium Headers */
+.medium-header {
+  font-family: var(--large-medium-header-font);
+  font-weight: 300;
+  font-size: var(--medium-header-size);
+  color: var(--pure-black);
+}
+
+/* Accent Text */
+.accent-text {
+  font-family: var(--accent-text-font);
+  font-style: italic;
+  font-size: var(--accent-text-size);
+  color: var(--pure-black);
+}
+
+.accent-text-form {
+  font-family: var(--accent-text-font);
+  font-style: italic;
+  font-size: var(--accent-text-form-size);
+  color: var(--pure-black);
+}
+
+/* Body Text */
+body {
+  font-family: var(--body-text-font);
+  font-size: var(--body-text-size);
+  line-height: var(--line-height-body);
+  color: var(--pure-black);
+}
+
+/* Grey Text */
+.grey-text {
+  color: var(--grey-opacity);
+}
+
+/* Accent Coral (can be used for buttons, links, etc.) */
+.accent-coral {
+  color: var(--accent-coral);
+}
