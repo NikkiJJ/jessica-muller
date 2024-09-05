@@ -1,7 +1,30 @@
 .nav-bar-jess {
   display: flex;
+  justify-content: space-between;
 }
 
 .custom-nav-links {
   display: flex;
+}
+
+.nav-link-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Change color when link is hovered */
+.nav-link-item:hover {
+  color: coral;
+  background: black;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 25px;
+
+}
+
+/* Style the link after it's been clicked (visited) */
+.nav-link-item:visited {
+  color: black; /* Ensure the visited color matches the original */
 }
