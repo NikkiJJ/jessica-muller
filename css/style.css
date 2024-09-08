@@ -1,94 +1,74 @@
-/* :root {
-
-  --pure-black: #000000;
-  --pure-white: #FFFFFF;
-  --accent-coral: #FFBE98;
-  --grey-opacity: rgba(0, 0, 0, 0.65);
-
-
-  --large-header-size: 116px;
-  --medium-header-size: 80px;
-  --accent-text-size: 35px;
-  --accent-text-form-size: 26px;
-  --body-text-size: 17px;
-  --line-height-body: 30px;
-
-
-  --large-medium-header-font: 'PF Marlet Display', sans-serif;
-  --accent-text-font: 'Playfair Display', serif;
-  --body-text-font: 'Apercu', sans-serif;
-}
-
-.large-header, .medium-header {
-  font-family: var(--large-medium-header-font);
-  font-weight: 400;
-  font-size: var(--large-header-size);
-  color: var(--pure-black);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-
 .large-header {
-  font-family: var(--large-medium-header-font);
-  font-weight: 100;
-  font-size: var(--large-header-size);
-  color: var(--pure-black);
+  font-family: 'pf-marlet-display', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 115px;
+  margin: 0;
 }
-
 
 .medium-header {
-  font-family: var(--large-medium-header-font);
+  font-family: 'pf-marlet-display', sans-serif;
   font-weight: 300;
-  font-size: var(--medium-header-size);
-  color: var(--pure-black);
-}
-
-
-.accent-text {
-  font-family: var(--accent-text-font);
-  font-style: italic;
-  font-size: var(--accent-text-size);
-  color: var(--pure-black);
-}
-
-.accent-text-form {
-  font-family: var(--accent-text-font);
-  font-style: italic;
-  font-size: var(--accent-text-form-size);
-  color: var(--pure-black);
-}
-
-
-body {
-  font-family: var(--body-text-font);
-  font-size: var(--body-text-size);
-  line-height: var(--line-height-body);
-  color: var(--pure-black);
-}
-
-
-.grey-text {
-  color: var(--grey-opacity);
-}
-
-
-.accent-coral {
-  color: var(--accent-coral);
-} */
-
-.large-font {
-  font-family: 'PF Marlet Display', sans-serif;
+  font-style: normal;
+  font-size: 80px;
+  margin: 0;
 }
 
 .accent-text {
   font-family: 'Playfair Display', serif;
   font-size: 35px;
   font-style: italic;
+  text-decoration: none;
+  color: inherit;
+}
+
+.accent-text:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.white-text {
+  color: white;
 }
 
 body {
-  font-family: 'Apercu', sans-serif;
+  font-family: 'Apercu Pro', sans-serif;
   font-size: 17px;
+}
+
+/* buttons */
+
+.view-portfolio {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  margin-right: 40px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-radius: 50%;
+  float: right;
+  width: 120px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  text-align: left; /* Aligns the text to the left */
+  line-height: 100px; /* Centers the text vertically */
+}
+
+.view-portfolio span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal; /* Resets line height for inner text */
+  transform: translateX(-20px); /* Move text slightly to the left */
+}
+
+.view-portfolio:hover {
+  color: #FFBE98;
+  background: black;
+  border-top: 1px solid #FFBE98;
+  border-right: 1px solid #FFBE98;
+}
+
+.view-portfolio:visited {
+  color: white;
 }

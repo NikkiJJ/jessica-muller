@@ -1,3 +1,8 @@
+.nav-sig {
+  padding-left: 50px;
+  font-weight: 600;
+}
+
 .nav-bar-jess {
   display: flex;
   justify-content: space-between;
@@ -5,6 +10,7 @@
 
 .custom-nav-links {
   display: flex;
+  padding-right: 50px;
 }
 
 .nav-link-item {
@@ -13,9 +19,8 @@
   color: black;
 }
 
-/* Change color when link is hovered */
 .nav-link-item:hover {
-  color: coral;
+  color: #FFBE98;
   background: black;
   padding: 5px;
   border: 1px solid black;
@@ -24,7 +29,6 @@
 
 }
 
-/* Style the link after it's been clicked (visited) */
 .nav-link-item:visited {
-  color: black; /* Ensure the visited color matches the original */
+  color: black;
 }
