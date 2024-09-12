@@ -1,0 +1,39 @@
+.footer-container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.initial-img {
+  height: 120px;
+  padding-bottom: 10px;
+}
+
+.footer-collection-img {
+  width: 450px;
+}
+
+.border-line {
+  border-bottom: 1px solid black;
+  width: 100%; /* Adjust the width as needed */
+  margin: 0 auto 100px auto; /* Centers the line horizontally */
+  top: 0; /* Adjusts its position within the footer container */
+  left: 50%;
+}
+
+
+.footer-right {
+  text-align: right;
+}
+
+.socials {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -73,3 +73,20 @@ body {
 .view-portfolio:visited {
   color: white;
 }
+
+.bolder {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.lighter {
+  font-weight: 100;
+}
+
+.strip-padding {
+  padding: 0;
+}
+
+.strip-margin {
+  margin: 0;
+}

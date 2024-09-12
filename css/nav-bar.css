@@ -11,6 +11,8 @@
 .custom-nav-links {
   display: flex;
   padding-right: 50px;
+  justify-content: space-between;
+  width: 500px;
 }
 
 .nav-link-item {
