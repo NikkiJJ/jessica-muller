@@ -23,13 +23,12 @@
   margin: 0;
 }
 
-.accent-text:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
 .white-text {
   color: white;
+}
+
+#black-text {
+  color: black !important;
 }
 
 body {
@@ -44,16 +43,19 @@ body {
   color: white;
   padding: 20px;
   margin-right: 40px;
-  border-top: 1px solid;
-  border-right: 1px solid;
+  border-top: 1px solid black; /* Set the black top border */
+  border-right: 1px solid black; /* Set the black right border */
+  border-bottom: none !important; /* Explicitly no bottom border */
+  border-left: none !important; /* Explicitly no left border */
   border-radius: 50%;
   float: right;
   width: 120px;
   height: 100px;
   display: inline-block;
   position: relative;
-  text-align: left; /* Aligns the text to the left */
+  text-align: left; /* Align text to the left */
   line-height: 100px; /* Centers the text vertically */
+  background: none; /* Ensure no background color is affecting the borders */
 }
 
 .view-portfolio span {
@@ -65,14 +67,17 @@ body {
 
 .view-portfolio:hover {
   color: #FFBE98;
-  background: black;
-  border-top: 1px solid #FFBE98;
-  border-right: 1px solid #FFBE98;
+  background: black; /* Changes background to black */
+  border-top: 1px solid #FFBE98; /* Coral top border on hover */
+  border-right: 1px solid #FFBE98; /* Coral right border on hover */
+  border-bottom: none; /* No bottom border on hover */
+  border-left: none; /* No left border on hover */
 }
 
 .view-portfolio:visited {
   color: white;
 }
+
 
 .bolder {
   font-weight: bolder;

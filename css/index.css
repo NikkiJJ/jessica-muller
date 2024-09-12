@@ -2,16 +2,21 @@
   background: linear-gradient(white 50%, black 50%);
   margin-left: 10px;
   margin-right: 10px;
-  padding-bottom: 150px;
-}
-
-.top-white {
   text-align: center;
   padding-top: 100px;
 }
 
+.top-black {
+  text-align: center;
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 900px;
+}
+
 .cover-photo {
   width: 90%;
+  padding-top: 20px;
   padding-bottom: 50px;
 }
 
@@ -38,7 +43,6 @@
 
 .middle-white {
   display: flex;
-  padding-top: 60px;
   width: 95%;
   background-color: white;
 }
@@ -50,12 +54,15 @@
 .middle-white-right {
   width: 50%;
   text-align: left;
-  padding: 50px;
+  padding-right: 100px;
+  padding-left: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  color: black !important;
 }
 
 .plating-img {
-  max-width: 100%; /* Ensures the image does not exceed the container width */
-  height: auto; /* Keeps the aspect ratio intact */
+  height: 100%;
   object-fit: cover; /* Ensures the image covers the container without distortion */
 }
 
