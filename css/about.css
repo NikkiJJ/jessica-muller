@@ -1,0 +1,26 @@
+.meet-the-chef {
+  display: flex;
+  margin-top: 20px;
+}
+
+.meet-jess-left {
+  width: 40%;
+}
+
+.meet-jess-right {
+  width: 60%;
+  padding: 50px;
+}
+
+.meet-jess {
+  width: 100%;
+}
+
+.meet-jess-text {
+  display: flex;
+}
+
+.meet-jess-text-column {
+  padding: 40px;
+  line-height: 2.0;
+}
