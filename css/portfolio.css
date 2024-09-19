@@ -1,0 +1,26 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 5px; /* Space between grid items */
+  width: 100%; /* Optional: Adjust width of the grid container */
+  margin: 0 auto; /* Center the grid */
+  padding-top: 10px;
+}
+
+.portfolio-item img {
+  width: 100%; /* Image takes up the full width of the grid item */
+  height: 100%; /* Maintain aspect ratio */
+}
+
+.hidden {
+  display: none;
+}
+
+#view-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #FFBE98;
+  border: none;
+  cursor: pointer;
+}
