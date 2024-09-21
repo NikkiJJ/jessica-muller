@@ -89,22 +89,8 @@ input:focus, textarea:focus {
   margin-bottom: 20px; /* Adds space between each question/field */
 }
 
-/*
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-button:hover {
-  background-color: #0056b3;
-}
-  */
-
-#submit-button {
+/* #submit-button {
   text-decoration: none;
   color: black;
   padding: 20px;
@@ -126,9 +112,53 @@ button:hover {
 
 #submit-button:hover {
   color: #FFBE98;
-  background: white !important; /* Changes background to black */
-  border-top: 1px solid #FFBE98 !important; /* Coral top border on hover */
-  border-right: 1px solid #FFBE98 !important; /* Coral right border on hover */
-  border-bottom: none; /* No bottom border on hover */
-  border-left: none; /* No left border on hover */
+  background: white !important;
+  border-top: 1px solid #FFBE98 !important;
+  border-right: 1px solid #FFBE98 !important;
+  border-bottom: none;
+  border-left: none;
+} */
+
+.custom-circle-button {
+  margin-top: 65px;
+  position: relative;
+  width: 120px; /* Smaller fixed width */
+  height: 120px; /* Smaller fixed height */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align text to the left */
+  flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+.button-text {
+  position: absolute;
+  left: -10px; /* Move the text further into the circle */
+  font-size: 16px;
+  color: black;
+  z-index: 2; /* Ensure text is above the circle */
+}
+
+
+/* Circular border with missing part */
+.custom-circle-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+  clip-path: inset(0 0 0 10%); /* Shorten the gap on the left */
+}
+
+.custom-circle-button:hover::before {
+  border-color: #FFBE98;
+  color: #FFBE98; /* Change border color on hover */
 }

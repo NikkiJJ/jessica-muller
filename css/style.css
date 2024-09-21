@@ -132,3 +132,9 @@ body {
 .strip-margin {
   margin: 0;
 }
+
+.button-box {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+  width: 100%; /* Make sure the container takes up the full width */
+}
