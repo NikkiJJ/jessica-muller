@@ -1,0 +1,134 @@
+.contact-cover {
+  width: 100%;
+  background-image: url('/images/contactcover.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 500px; /* Makes the div cover the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white; /* Adjust the text color if needed */
+}
+
+.contact-cover-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.contact-box {
+  display: flex;
+}
+
+.contact-deets {
+  width: 50%;
+  padding: 100px;
+  position: relative; /* Required for positioning the pseudo-element */
+}
+
+.contact-deets::before {
+  content: '';
+  position: absolute;
+  top: 10%; /* Adjust to control how far from the top the border starts */
+  bottom: 10%; /* Adjust to control how far from the bottom the border ends */
+  right: 0; /* Position it at the right edge */
+  width: 1px;
+  background-color: black; /* Border color */
+}
+
+
+.contact-form-container {
+  width: 50%;
+  padding: 100px;
+}
+
+.contact-form {
+  display: flex;
+  justify-content: space-between; /* Aligns the form fields to the left and button to the right */
+  align-items: flex-start; /* Align items at the top */
+  width: 100%; /* Adjust as necessary */
+}
+
+.form-left {
+  width: 70%; /* Adjust the width of the form fields section */
+}
+
+.form-right {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+input, textarea {
+  width: 100%; /* Ensure all inputs and textarea are full width */
+  border: none; /* Remove default borders */
+  border-bottom: 1px solid black; /* Add a bottom border for the line effect */
+  background: none; /* No background */
+  outline: none; /* Remove the focus outline */
+  padding: 8px 0; /* Space above and below the text */
+  height: 40px; /* Fixed height for all inputs */
+  box-sizing: border-box; /* Ensures padding is included in height */
+  font-size: 16px; /* Keep consistent font size */
+}
+
+textarea {
+  height: 40px; /* Same height as input to keep it consistent */
+  resize: none; /* Disable resizing to keep consistent height */
+}
+
+input:focus, textarea:focus {
+  border-bottom: 2px solid black; /* Slightly thicker border on focus */
+}
+
+/* Spacing between form elements */
+.form-group {
+  margin-bottom: 20px; /* Adds space between each question/field */
+}
+
+/*
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+  */
+
+#submit-button {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  margin-right: 40px;
+  border-top: 1px solid black !important;
+  border-right: 1px solid black !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-radius: 50%;
+  width: 120px;
+  height: 100px;
+  display: inline-block;
+  text-align: left;
+  line-height: 100px;
+  background: none;
+  background-color: white !important;
+  margin-top: 70px;
+}
+
+#submit-button:hover {
+  color: #FFBE98;
+  background: white !important; /* Changes background to black */
+  border-top: 1px solid #FFBE98 !important; /* Coral top border on hover */
+  border-right: 1px solid #FFBE98 !important; /* Coral right border on hover */
+  border-bottom: none; /* No bottom border on hover */
+  border-left: none; /* No left border on hover */
+}

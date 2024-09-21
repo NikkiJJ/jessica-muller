@@ -1,5 +1,6 @@
 /* Portfolio grid styling */
 .portfolio-grid {
+  padding-top: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   gap: 10px; /* Space between grid items */
@@ -55,7 +56,15 @@
   display: none;
 }
 
-/* View more button styling */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 150px; /* Makes the container take the full viewport height */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #view-more {
   text-decoration: none;
   color: black;

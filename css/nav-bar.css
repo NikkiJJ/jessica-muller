@@ -22,7 +22,7 @@
 }
 
 .nav-link-item:hover {
-  color: #FFBE98;
+  color: #FFBE98 !important;
   background: black;
   padding: 5px;
   border: 1px solid black;

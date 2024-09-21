@@ -1,3 +1,8 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 .large-header {
   font-family: 'pf-marlet-display', sans-serif;
   font-weight: 300;
@@ -31,6 +36,10 @@
   color: black !important;
 }
 
+.black-text {
+  color: black !important;
+}
+
 body {
   font-family: 'Apercu Pro', sans-serif;
   font-size: 17px;
@@ -56,13 +65,6 @@ body {
   text-align: left; /* Align text to the left */
   line-height: 100px; /* Centers the text vertically */
   background: none; /* Ensure no background color is affecting the borders */
-}
-
-.button-container {
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 300px; /* Makes the container take the full viewport height */
 }
 
 #view-more {
