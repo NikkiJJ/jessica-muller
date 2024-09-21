@@ -1,20 +1,37 @@
 .meet-the-chef {
   display: flex;
-  margin-top: 20px;
+  flex-direction: column;
+}
+
+.meet-the-chef-content {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Use the class instead of the id */
+.navbar-overlay {
+  position: relative;
+  z-index: 10; /* Ensure the navbar stays above the image */
 }
 
 .meet-jess-left {
-  width: 40%;
-}
-
-.meet-jess-right {
-  width: 60%;
-  padding: 50px;
+  width: 55%; /* Keep the width */
+  position: relative; /* Position relative for control over the image */
+  margin-top: -50px; /* Move the image up into the navbar (adjust the value as needed) */
+  z-index: 1; /* Keep it below the navbar */
 }
 
 .meet-jess {
-  width: 100%;
+  width: 100%; /* Image takes up full width of its container */
+  height: auto; /* Ensure the image maintains aspect ratio */
 }
+
+.meet-jess-right {
+  width: 60%; /* Ensure the content is aligned on the right */
+  padding: 50px;
+  z-index: 5; /* Keep the content layered correctly above the image */
+}
+
 
 .meet-jess-text {
   display: flex;
