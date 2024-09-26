@@ -11,7 +11,6 @@
   background-color: black;
   margin-left: 10px;
   margin-right: 10px;
-  height: 900px;
 }
 
 .cover-photo {
@@ -45,26 +44,36 @@
   display: flex;
   width: 95%;
   background-color: white;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.middle-white-left {
-  width: 50%;
+.middle-white-left,
+.middle-white-right {
+  width: 50%; /* Ensure both sections take up 50% of the container */
+  flex: 1; /* Flexbox property to ensure equal width for both sections */
 }
 
 .middle-white-right {
-  width: 50%;
   text-align: left;
   padding-right: 100px;
-  padding-left: 200px;
+  padding-left: 100px;
   padding-top: 100px;
   padding-bottom: 100px;
   color: black !important;
 }
 
-.plating-img {
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container without distortion */
+.middle-white-left {
+  overflow: hidden; /* Ensures any overflow from the image is hidden */
 }
+
+.plating-img {
+  width: 100%; /* Ensure the image fills the width of its container */
+  height: 100%; /* Ensure the image fills the height */
+  object-fit: cover; /* Allow some cropping while maintaining aspect ratio */
+}
+
+
 
 .about-jess-text {
   line-height: 2.5;
@@ -73,13 +82,15 @@
 .bottom-black {
   background-color: black;
   padding: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .link-table {
   display: flex;
   justify-content: space-between;
   background-color: black;
-  padding: 40px;
+  padding-top: 40px;
   border-bottom: 1px solid white;
   transition: border-color 0.3s ease; /* Smooth transition for the border */
 }
@@ -91,6 +102,7 @@
 .medium-header {
   color: white;
   transition: color 0.3s ease; /* Smooth transition for text color */
+  width: 100%;
 }
 
 .link-table:hover .medium-header {
@@ -106,4 +118,44 @@
 .link-table:hover .view-portfolio {
   color: #FFBE98; /* Change button color on hover */
   border-color: #FFBE98; /* Change button border color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  .first-container {
+    padding-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .top-black {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .middle-white {
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align text for mobile */
+  }
+
+  .middle-white-left, .middle-white-right {
+    width: 100%; /* Make each section full width */
+  }
+
+  .middle-white-right {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+  }
+
+  .plating-img {
+    width: 100%; /* Ensure the image takes full width on mobile */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+
+  .about-jess-text {
+    font-size: 1rem; /* Reduce text size for mobile readability */
+  }
+
 }

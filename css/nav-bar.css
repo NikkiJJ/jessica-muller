@@ -25,13 +25,71 @@
 .nav-link-item:hover {
   color: #FFBE98 !important;
   background: black;
-  padding: 5px;
+  padding: 5px 10px; /* Set padding to evenly space text */
   border: 1px solid black;
   border-radius: 12px;
-  height: 20px;
-
+  margin-top: 2px;
+  height: auto; /* Remove fixed height to allow flexible height */
+  display: inline-block; /* Ensure the element can adjust its height */
+  line-height: normal; /* Ensure text is centered inside the button */
 }
+
 
 .nav-link-item:visited {
   color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-bar-jess {
+    width: 100%; /* Ensure navbar stretches across the screen */
+    padding: 0 20px; /* Add padding to prevent squashing */
+    overflow-x: hidden !important; /* Prevent horizontal scroll */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  .custom-nav-links {
+    width: 100%; /* Make sure nav links take up full width */
+    justify-content: space-between; /* Distribute links evenly */
+    padding-right: 0; /* Remove padding on smaller screens */
+    box-sizing: border-box; /* Ensure no overflow */
+  }
+
+  .nav-link-item {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 8px; /* Adjust padding to ensure it fits well */
+  }
+
+  .nav-sig {
+    font-size: 25px; /* Reduce the signature font size */
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-bar-jess {
+    width: 100%; /* Full width on mobile */
+    padding: 0 10px; /* Add padding to prevent squashing */
+    overflow-x: hidden !important; /* Ensure no horizontal scrolling */
+    box-sizing: border-box; /* Ensure no extra width from padding */
+  }
+
+  .custom-nav-links {
+    width: 100%; /* Make nav links take up full width */
+    justify-content: space-between; /* Keep links evenly spaced */
+    padding-right: 0;
+    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+  }
+
+  .nav-link-item {
+    font-size: 12px; /* Further reduce font size for mobile */
+    padding: 6px; /* Adjust padding for mobile */
+  }
+
+  .nav-sig {
+    font-size: 1.2rem; /* Further reduce signature size for mobile */
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
 }

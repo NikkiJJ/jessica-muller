@@ -37,3 +37,108 @@
   display: flex;
   justify-content: space-between;
 }
+
+.techni-tag {
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  font-size: smaller;
+  font-weight: lighter;
+  text-decoration: none;
+  padding-left: 20px;
+  padding-right: 60px;
+  margin-bottom: none;
+}
+
+
+.techni-link {
+  color: inherit; /* Keep the link color the same as the surrounding text */
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Remove blue hover effect */
+.techni-link:hover {
+  color: inherit; /* Keep the color same on hover */
+  text-decoration: none; /* No underline on hover */
+}
+
+/* Remove the visited link color */
+.techni-link:visited {
+  color: inherit; /* Keep the visited link color the same as normal */
+  text-decoration: none; /* No underline on visited links */
+}
+
+/* Optional: Remove active state styles */
+.techni-link:active {
+  color: inherit; /* Keep the active link color the same as normal */
+  text-decoration: none; /* No underline on active links */
+}
+
+#policy-padding {
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center; /* Center content on smaller screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .footer-left, .footer-right {
+    width: 100%; /* Make both sections take full width */
+    margin-bottom: 20px; /* Add space between stacked sections */
+  }
+
+  .footer-right {
+    text-align: center; /* Ensure text is centered for smaller screens */
+    width: 100%; /* Full width on smaller screens */
+    margin: 0 auto; /* Center the div */
+    padding: 20px 0; /* Add padding for spacing */
+  }
+
+  .socials {
+    margin: 0 auto; /* Center the div on smaller screens */
+    justify-content: center; /* Center the social icons horizontally */
+    margin-top: 10px;
+  }
+
+  .footer-collection-img {
+    width: 100%; /* Make image responsive to full width */
+    max-width: 450px; /* Limit maximum width for larger screens */
+  }
+
+  .footer-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px; /* Adjust padding for very small screens */
+  }
+
+  .footer-collection-img {
+    width: 100%; /* Ensure the image fits small screens */
+    max-width: 300px; /* Further reduce size for small screens */
+  }
+
+  .techni-tag {
+    flex-direction: column; /* Stack the policy and studio links */
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  #policy-padding {
+    margin-right: 0; /* Remove right margin for smaller screens */
+    margin-top: 10px;
+  }
+}

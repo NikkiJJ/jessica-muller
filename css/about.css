@@ -32,6 +32,13 @@
   z-index: 5; /* Keep the content layered correctly above the image */
 }
 
+.top-black-about {
+  text-align: center;
+  background-color: black;
+  margin-bottom: 0; /* Remove any margin at the bottom */
+  padding-bottom: 0; /* Remove padding at the bottom */
+}
+
 
 .meet-jess-text {
   display: flex;
@@ -44,20 +51,20 @@
 
 .custom-circle-button-atag {
   position: relative;
-  display: inline-block; /* Makes <a> behave like a button */
-  width: 120px; /* Fixed width for circle */
-  height: 120px; /* Fixed height for circle */
+  display: inline-block;
+  width: 120px;
+  height: 120px;
   background-color: transparent;
-  text-decoration: none; /* Remove underline from link */
-  color: white;
+  text-decoration: none;
+  color: white; /* Initially white text */
   border: none;
   outline: none;
   cursor: pointer;
-  text-align: left; /* Align text to the left */
-  flex-shrink: 0; /* Prevent shrinking */
+  text-align: left;
   display: flex;
-  align-items: center; /* Center text vertically */
-  justify-content: flex-start; /* Align text horizontally to the left */
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .custom-circle-button-atag::before {
@@ -67,25 +74,214 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border: 2px solid white; /* Circular border */
-  border-radius: 50%; /* Perfect circle */
+  border: 2px solid white; /* Initially white border */
+  border-radius: 50%; /* Circular shape */
   box-sizing: border-box;
   z-index: 1;
-  clip-path: inset(0 0 0 15%); /* Gap where the text enters */
+  clip-path: inset(0 0 0 15%); /* Creates the gap in the circle */
 }
 
 .custom-circle-button-atag:hover::before {
-  border-color: white; /* Change border color on hover */
+  border-color: #FFBE98; /* Coral border on hover */
 }
 
 .custom-circle-button-atag span {
   position: absolute;
-  left: -10px; /* Adjust this to move text into the circle */
+  left: -10px; /* Adjust to position the text correctly */
   font-size: 16px;
-  z-index: 2; /* Ensure the text is above the border */
-  color: #FFBE98;
+  z-index: 2;
+  color: white; /* Initially white text */
 }
 
-.custom-circle-button-atag:hover {
-  color: #FFBE98; /* Change text color on hover */
+.custom-circle-button-atag:hover span {
+  color: #FFBE98; /* Change text color to coral on hover */
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+  width: 98%; /* Make sure the container takes up the full width */
+}
+
+.shaded-image-cover {
+  position: relative;
+  width: 100vw;
+  height: auto;
+}
+
+.cover-photo-about {
+  width: 100%;
+  height: auto;
+}
+
+.shaded-image-cover .accent-text,
+.shaded-image-cover .medium-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  color: white;
+  text-align: center;
+}
+
+.accent-text {
+  top: 45%; /* Position this slightly higher */
+  margin-bottom: 10px;
+}
+
+.medium-header {
+  top: 55%; /* Position this below the accent text */
+}
+
+/* Mobile-friendly styles */
+@media screen and (max-width: 768px) {
+  .meet-the-chef-content {
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center;
+  }
+
+  .meet-jess-left, .meet-jess-right {
+    width: 100%; /* Full width for both sections on mobile */
+    padding: 20px;
+  }
+
+  .meet-jess-left {
+    margin-top: 0; /* Remove the negative margin for the image on mobile */
+    text-align: center; /* Center the image on mobile */
+  }
+
+  .meet-jess {
+    width: 80%; /* Reduce the image size for mobile */
+    height: auto;
+  }
+
+  .meet-jess-right {
+    padding: 20px; /* Reduce padding for better spacing on mobile */
+  }
+
+  .meet-jess-text-column {
+    padding: 10px; /* Reduce padding between the text columns */
+  }
+
+  .custom-circle-button-atag {
+    width: 80px; /* Reduce the size of the button on mobile */
+    height: 80px;
+  }
+
+  .custom-circle-button-atag span {
+    font-size: 14px; /* Reduce the font size for the button */
+  }
+
+  .button-box {
+    justify-content: center; /* Center the button on mobile */
+    width: 100%;
+  }
+
+  .shaded-image-cover {
+    height: auto; /* Adjust height to fit smaller screens */
+  }
+
+  .shaded-image-cover .accent-text,
+  .shaded-image-cover .medium-header {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Keep centered horizontally */
+    text-align: center;
+  }
+
+  .accent-text {
+    top: 40%; /* Adjust position higher for smaller screens */
+    font-size: 1.2rem; /* Reduce font size */
+  }
+
+  .medium-header {
+    top: 50%; /* Adjust position for smaller screens */
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .cover-photo-about {
+    width: 100%; /* Ensure the image still covers full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .meet-jess {
+    width: 90%; /* Further reduce the image size on very small screens */
+  }
+
+  .meet-jess-text-column {
+    font-size: 0.9rem; /* Reduce text size for smaller screens */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+
+  .meet-jess-left {
+    padding: 0px;
+    margin: 5px;
+  }
+
+  .meet-jess-right {
+    width: 100%; /* Full width for mobile screens */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+  }
+
+  .shaded-image-cover {
+    height: auto;
+  }
+
+  .shaded-image-cover .accent-text,
+  .shaded-image-cover .medium-header {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .accent-text {
+    top: 35%; /* Further adjust position for very small screens */
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .medium-header {
+    top: 45%;
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .cover-photo-about {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1640px) {
+  .top-black {
+    margin: 0px;
+  }
+
+  .meet-jess-text {
+    line-height: 3; /* Increase line spacing for larger gaps between text */
+    font-size: 1.5rem; /* Further increase the font size */
+    padding: 20px 0; /* Add padding to create vertical space inside the text */
+  }
+
+  .meet-jess-left {
+    margin-top: -100px; /* Increase the negative margin to stretch the image into the navbar */
+  }
+
+  .meet-jess {
+    height: 100%; /* Ensure the image stretches to full height */
+    object-fit: cover; /* Ensure the image maintains its aspect ratio while covering the container */
+  }
+
+  .large-header {
+    font-size: 4.5rem; /* Further increase the header size to fill space */
+    margin-bottom: 30px; /* Add more space below the header */
+  }
+
+  .accent-text {
+    font-size: 2.5rem; /* Increase the size of accent text */
+    margin-bottom: 20px; /* Add space below the accent text */
+  }
 }

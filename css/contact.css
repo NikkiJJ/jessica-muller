@@ -89,36 +89,6 @@ input:focus, textarea:focus {
   margin-bottom: 20px; /* Adds space between each question/field */
 }
 
-
-/* #submit-button {
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  margin-right: 40px;
-  border-top: 1px solid black !important;
-  border-right: 1px solid black !important;
-  border-bottom: none !important;
-  border-left: none !important;
-  border-radius: 50%;
-  width: 120px;
-  height: 100px;
-  display: inline-block;
-  text-align: left;
-  line-height: 100px;
-  background: none;
-  background-color: white !important;
-  margin-top: 70px;
-}
-
-#submit-button:hover {
-  color: #FFBE98;
-  background: white !important;
-  border-top: 1px solid #FFBE98 !important;
-  border-right: 1px solid #FFBE98 !important;
-  border-bottom: none;
-  border-left: none;
-} */
-
 .custom-circle-button {
   margin-top: 65px;
   position: relative;
@@ -161,4 +131,104 @@ input:focus, textarea:focus {
 .custom-circle-button:hover::before {
   border-color: #FFBE98;
   color: #FFBE98; /* Change border color on hover */
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjust the contact cover for smaller screens */
+  .contact-cover {
+    height: 300px; /* Smaller height for mobile */
+    background-size: cover; /* Ensure the background image covers the div */
+    background-position: center; /* Keep the image centered */
+    position: relative; /* For absolute positioning of content */
+  }
+
+  /* Keep the text inside the contact cover image */
+  .contact-cover-content {
+    position: absolute;
+    bottom: 10px; /* Keep the text near the bottom of the image */
+    left: 0;
+    right: 0;
+    padding-bottom: 10px; /* Add padding to avoid touching the image edge */
+    text-align: center;
+    color: white; /* Ensure visibility of text */
+  }
+
+  /* Stack the contact details and form */
+  .contact-box {
+    flex-direction: column; /* Stack contact details and form vertically */
+    align-items: center;
+    text-align: center;
+    padding: 20px; /* Add padding for spacing */
+  }
+
+  .contact-deets, .contact-form-container {
+    width: 100%; /* Full width for each section */
+    padding: 20px; /* Adjust padding for better fit */
+    box-sizing: border-box;
+  }
+
+  .contact-deets::before {
+    display: none; /* Hide vertical line */
+  }
+
+  /* Adjust the form for smaller screens */
+  .contact-form {
+    flex-direction: column; /* Stack form fields and button */
+    align-items: center;
+  }
+
+  .form-left {
+    width: 100%; /* Full width for form fields */
+    margin-bottom: 20px; /* Space between form fields and button */
+  }
+
+  .form-right {
+    width: 100%; /* Full width for the button */
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-top: 0;
+    padding: 0; /* Remove padding */
+  }
+
+  /* Adjust button size */
+  .custom-circle-button {
+    width: 80px; /* Smaller button */
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-text {
+    font-size: 14px; /* Adjust button text size */
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-cover {
+    height: 250px; /* Further reduce height for very small screens */
+  }
+
+  .contact-deets, .contact-form-container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .custom-circle-button {
+    width: 70px; /* Further reduce button size */
+    height: 70px;
+  }
+
+  .button-text {
+    font-size: 12px; /* Further reduce button text size */
+  }
+
+  input, textarea {
+    font-size: 14px; /* Adjust input field font size */
+  }
 }
