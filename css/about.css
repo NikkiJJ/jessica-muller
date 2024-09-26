@@ -6,31 +6,36 @@
 .meet-the-chef-content {
   display: flex;
   flex-direction: row;
+  height: 100%; /* Ensure the content takes full height */
+  position: relative;
 }
 
-/* Use the class instead of the id */
 .navbar-overlay {
   position: relative;
-  z-index: 10; /* Ensure the navbar stays above the image */
+  z-index: 10;
 }
 
 .meet-jess-left {
-  width: 55%; /* Keep the width */
-  position: relative; /* Position relative for control over the image */
-  margin-top: -50px; /* Move the image up into the navbar (adjust the value as needed) */
-  z-index: 1; /* Keep it below the navbar */
+  width: 55%;
+  position: relative;
+  margin-top: -50px; /* Reintroduce the negative margin to move the image into the navbar */
+  z-index: 1;
 }
 
 .meet-jess {
-  width: 100%; /* Image takes up full width of its container */
-  height: auto; /* Ensure the image maintains aspect ratio */
+  position: relative; /* Keep the image positioned within its container */
+  width: 100%;
+  height: calc(100% + 50px); /* Add height to extend into the navbar */
+  object-fit: cover; /* Ensure the image scales without distorting aspect ratio */
+  top: -50px; /* Align the image to move it upwards */
 }
 
 .meet-jess-right {
-  width: 60%; /* Ensure the content is aligned on the right */
+  width: 60%;
   padding: 50px;
-  z-index: 5; /* Keep the content layered correctly above the image */
+  z-index: 5;
 }
+
 
 .top-black-about {
   text-align: center;
@@ -150,8 +155,8 @@
   }
 
   .meet-jess {
-    width: 80%; /* Reduce the image size for mobile */
-    height: auto;
+    width: 100%; /* Reduce the image size for mobile */
+    height: 100vn;
   }
 
   .meet-jess-right {
@@ -206,17 +211,16 @@
 
 @media screen and (max-width: 480px) {
   .meet-jess {
-    width: 90%; /* Further reduce the image size on very small screens */
-  }
-
-  .meet-jess-text-column {
-    font-size: 0.9rem; /* Reduce text size for smaller screens */
-    line-height: 1.6; /* Adjust line height for readability */
+    width: 100%;
+    height: 100vh; /* Ensure it fills the full viewport height */
+    object-fit: cover; /* Maintain the aspect ratio and cover the container */
+    position: relative;
+    top: -10px; /* Adjust this value to move the image upwards */
   }
 
   .meet-jess-left {
     padding: 0px;
-    margin: 5px;
+    margin-top: 0;
   }
 
   .meet-jess-right {
