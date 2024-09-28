@@ -42,54 +42,57 @@
 
 @media screen and (max-width: 768px) {
   .nav-bar-jess {
-    width: 100%; /* Ensure navbar stretches across the screen */
-    padding: 0 20px; /* Add padding to prevent squashing */
-    overflow-x: hidden !important; /* Prevent horizontal scroll */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    width: 100%; /* Ensure the navbar stretches across the screen */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Stack the logo and links vertically */
+    align-items: center; /* Center the content */
   }
 
   .custom-nav-links {
-    width: 100%; /* Make sure nav links take up full width */
-    justify-content: space-between; /* Distribute links evenly */
-    padding-right: 0; /* Remove padding on smaller screens */
-    box-sizing: border-box; /* Ensure no overflow */
+    width: 100%; /* Full width for the links */
+    justify-content: center; /* Center the links */
+    display: flex; /* Ensure links are on the same line */
+    padding-right: 0;
   }
 
   .nav-link-item {
-    font-size: 14px; /* Reduce font size for smaller screens */
-    padding: 8px; /* Adjust padding to ensure it fits well */
+    font-size: 14px; /* Adjust the font size */
+    padding: 8px;
   }
 
   .nav-sig {
-    font-size: 25px; /* Reduce the signature font size */
+    font-size: 25px; /* Adjust the signature size */
+    padding-bottom: 10px; /* Add some spacing below the signature */
+    text-align: center; /* Center the signature */
     padding-left: 0px;
-    padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .nav-bar-jess {
-    width: 100%; /* Full width on mobile */
-    padding: 0 10px; /* Add padding to prevent squashing */
-    overflow-x: hidden !important; /* Ensure no horizontal scrolling */
-    box-sizing: border-box; /* Ensure no extra width from padding */
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column; /* Stack the logo and links vertically */
+    align-items: center;
   }
 
   .custom-nav-links {
-    width: 100%; /* Make nav links take up full width */
-    justify-content: space-between; /* Keep links evenly spaced */
-    padding-right: 0;
-    box-sizing: border-box; /* Ensure padding doesn't add extra width */
+    width: 100%;
+    justify-content: center; /* Center the links */
+    display: flex;
   }
 
   .nav-link-item {
-    font-size: 12px; /* Further reduce font size for mobile */
-    padding: 6px; /* Adjust padding for mobile */
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 6px;
   }
 
   .nav-sig {
-    font-size: 1.2rem; /* Further reduce signature size for mobile */
-    padding-left: 0px;
+    font-size: 1.2rem; /* Adjust font size */
     padding-bottom: 10px;
+    text-align: center;
+    padding-left: 0px;
   }
 }

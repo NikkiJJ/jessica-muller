@@ -280,3 +280,35 @@ body {
     margin: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .custom-circle-button-atag {
+    width: 80px; /* Smaller width for smaller screens */
+    height: 80px; /* Smaller height for smaller screens */
+  }
+
+  .custom-circle-button-atag::before {
+    border-width: 1px; /* Make the border thinner on small screens */
+  }
+
+  .custom-circle-button-atag span {
+    font-size: 12px; /* Reduce font size for smaller screens */
+    left: -5px; /* Adjust text position for the smaller button */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .custom-circle-button-atag {
+    width: 60px; /* Even smaller width for very small screens */
+    height: 60px; /* Even smaller height for very small screens */
+  }
+
+  .custom-circle-button-atag::before {
+    border-width: 1px; /* Maintain thinner border for very small screens */
+  }
+
+  .custom-circle-button-atag span {
+    font-size: 10px; /* Further reduce font size */
+    left: -5px; /* Adjust text position further */
+  }
+}

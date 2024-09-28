@@ -36,7 +36,7 @@
 
 .scroll-img {
   flex-shrink: 0;
-  width: 400px;
+  width: 400px !important;
   padding: 10px;
 }
 
@@ -122,14 +122,21 @@
 
 @media screen and (max-width: 768px) {
   .first-container {
-    padding-top: 50px;
+    padding-top: 20px;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .cover-photo {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 95%;
   }
 
   .top-black {
     margin-left: 5px;
     margin-right: 5px;
+    padding-top: 30px;
   }
 
   .middle-white {
@@ -146,6 +153,7 @@
     padding-top: 10px;
     padding-left: 5px;
     padding-right: 5px;
+    padding-bottom: 20px;
     text-align: center;
   }
 
@@ -154,8 +162,30 @@
     height: auto; /* Adjust height to maintain aspect ratio */
   }
 
+  .scroll-img {
+    width: 200px;
+  }
+
   .about-jess-text {
     font-size: 1rem; /* Reduce text size for mobile readability */
+    line-height: 1.7;
   }
+
+  .white-text {
+    color: white !important;
+  }
+
+  .link-table {
+    white-space: nowrap; /* Prevent text wrapping inside the link table */
+  }
+
+  .medium-header {
+    white-space: nowrap; /* Prevent text wrapping for the headers */
+  }
+
+  .button-box {
+    white-space: nowrap; /* Prevent button text from wrapping */
+  }
+
 
 }
