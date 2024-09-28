@@ -65,27 +65,53 @@
   margin-bottom: 20px;
 }
 
-/* #view-more {
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  margin-right: 40px;
-  border-top: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: none !important;
-  border-left: none !important;
-  border-radius: 50%;
-  width: 120px;
-  height: 100px;
-  display: inline-block;
-  text-align: left;
-  line-height: 100px;
-  background: none;
+@media screen and (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Stack the grid into one column on smaller screens */
+    gap: 5px; /* Reduce the gap between items */
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    height: auto; /* Allow the image height to adjust automatically */
+  }
+
+  .image-caption {
+    padding: 20px; /* Reduce padding to fit smaller screens */
+    font-size: 12px; /* Adjust font size for better readability */
+    opacity: 0; /* Keep hidden initially */
+    transition: opacity 0.3s ease-in-out; /* Ensure smooth hover effect */
+  }
+
+  .image-container:hover .image-caption {
+    opacity: 1; /* Reveal text on hover */
+  }
+
+  .image-container img {
+    object-fit: contain; /* Ensure the image fits nicely on smaller screens */
+  }
 }
 
-#view-more:hover {
-  color: #FFBE98;
-  background: white;
-  border-top: 1px solid #FFBE98;
-  border-right: 1px solid #FFBE98;
-} */
+@media screen and (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Keep the single column layout */
+    gap: 5px; /* Further reduce the gap if needed */
+  }
+
+  .image-caption {
+    padding: 15px; /* Further reduce padding for very small screens */
+    font-size: 11px; /* Adjust font size for readability */
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease-in-out; /* Ensure hover effect is smooth */
+  }
+
+  .image-container:hover .image-caption {
+    opacity: 1; /* Keep hover effect */
+  }
+
+  .button-container {
+    height: auto; /* Allow the button container to adjust its height */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

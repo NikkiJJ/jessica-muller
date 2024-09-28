@@ -36,7 +36,7 @@
 
 .scroll-img {
   flex-shrink: 0;
-  width: 400px !important;
+  width: 400px;
   padding: 10px;
 }
 

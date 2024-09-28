@@ -164,7 +164,14 @@
   }
 
   .meet-jess-text-column {
-    padding: 10px; /* Reduce padding between the text columns */
+    padding: 10px 5px; /* Reduce padding between the text columns */
+    line-height: 1.6;
+    width: 100%;
+  }
+
+  .meet-jess-text {
+    display: flex;
+    flex-direction: column; /* Stack the columns vertically */
   }
 
   .custom-circle-button-atag {
@@ -182,26 +189,36 @@
   }
 
   .shaded-image-cover {
-    height: auto; /* Adjust height to fit smaller screens */
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+
+  .cover-photo-about {
+    width: 100%;
+    height: auto;
   }
 
   .shaded-image-cover .accent-text,
   .shaded-image-cover .medium-header {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Keep centered horizontally */
+    transform: translateX(-50%);
+    color: white;
     text-align: center;
   }
 
-  .accent-text {
-    top: 40%; /* Adjust position higher for smaller screens */
-    font-size: 1.2rem; /* Reduce font size */
+  /* Fix the positioning issue */
+  .shaded-image-cover .accent-text {
+    top: 25%; /* Adjust top position for smaller screens */
+    font-size: 1rem; /* Slightly smaller font for smaller screens */
   }
 
-  .medium-header {
-    top: 50%; /* Adjust position for smaller screens */
-    font-size: 1.8rem; /* Reduce font size */
+  .shaded-image-cover .medium-header {
+    top: 45%; /* Adjust position further for smaller screens */
+    font-size: 1.5rem;
   }
+
 
   .cover-photo-about {
     width: 100%; /* Ensure the image still covers full width */
@@ -220,7 +237,7 @@
 
   .meet-jess-left {
     padding: 0px;
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .meet-jess-right {
@@ -233,24 +250,43 @@
   }
 
   .shaded-image-cover {
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+
+  .cover-photo-about {
+    width: 100%;
     height: auto;
   }
 
   .shaded-image-cover .accent-text,
   .shaded-image-cover .medium-header {
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    color: white;
     text-align: center;
   }
 
-  .accent-text {
-    top: 35%; /* Further adjust position for very small screens */
-    font-size: 1rem; /* Smaller font size for mobile */
+  /* Fix the positioning issue */
+  .shaded-image-cover .accent-text {
+    top: 25%; /* Adjust top position for smaller screens */
+    font-size: 1rem; /* Slightly smaller font for smaller screens */
   }
 
+  .shaded-image-cover .medium-header {
+    top: 45%; /* Adjust position further for smaller screens */
+    font-size: 1.5rem;
+  }
+
+
   .medium-header {
-    top: 45%;
-    font-size: 1.5rem; /* Further reduce font size */
+    position: absolute;
+    top: 45%; /* Ensure enough space between the two text elements */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem; /* Reduce font size */
   }
 
   .cover-photo-about {
