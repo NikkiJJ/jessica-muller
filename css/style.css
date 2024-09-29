@@ -74,39 +74,11 @@ body {
   background: none; /* Ensure no background color is affecting the borders */
 }
 
-#view-more {
-  text-decoration: none;
-  color: black;
-  padding: 20px;
-  margin-right: 40px;
-  border-top: 1px solid black !important; /* Set the black top border */
-  border-right: 1px solid black !important; /* Set the black right border */
-  border-bottom: none !important;
-  border-left: none !important;
-  border-radius: 50%;
-  width: 120px;
-  height: 100px;
-  display: inline-block;
-  text-align: left;
-  line-height: 100px;
-  background: none;
-  background-color: white !important;
-}
-
-#view-more:hover {
-  color: #FFBE98;
-  background: white !important; /* Changes background to black */
-  border-top: 1px solid #FFBE98 !important; /* Coral top border on hover */
-  border-right: 1px solid #FFBE98 !important; /* Coral right border on hover */
-  border-bottom: none; /* No bottom border on hover */
-  border-left: none; /* No left border on hover */
-}
-
 .view-portfolio span {
   display: inline-block;
   vertical-align: middle;
-  line-height: normal; /* Resets line height for inner text */
-  transform: translateX(-20px); /* Move text slightly to the left */
+  line-height: normal;
+  transform: translateX(-20px);
 }
 
 .view-portfolio:hover {
@@ -285,6 +257,7 @@ body {
   .custom-circle-button-atag {
     width: 80px; /* Smaller width for smaller screens */
     height: 80px; /* Smaller height for smaller screens */
+    padding-right: 5px;
   }
 
   .custom-circle-button-atag::before {
@@ -301,6 +274,7 @@ body {
   .custom-circle-button-atag {
     width: 60px; /* Even smaller width for very small screens */
     height: 60px; /* Even smaller height for very small screens */
+    padding-right: 5px;
   }
 
   .custom-circle-button-atag::before {
