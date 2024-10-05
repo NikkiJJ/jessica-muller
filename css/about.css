@@ -6,7 +6,7 @@
 .meet-the-chef-content {
   display: flex;
   flex-direction: row;
-  height: 100%; /* Ensure the content takes full height */
+  align-items: stretch; /* Ensures both columns stretch to the same height */
   position: relative;
 }
 
@@ -22,6 +22,12 @@
   z-index: 1;
 }
 
+.meet-jess-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+  height: 100%; /* Stretch the content to full height */
+}
 .meet-jess {
   position: relative; /* Keep the image positioned within its container */
   width: 100%;
@@ -36,22 +42,40 @@
   z-index: 5;
 }
 
-
 .top-black-about {
   text-align: center;
   background-color: black;
-  margin-bottom: 0; /* Remove any margin at the bottom */
+  margin-bottom: 60px; /* Remove any margin at the bottom */
   padding-bottom: 0; /* Remove padding at the bottom */
 }
 
-
+/*
 .meet-jess-text {
   display: flex;
 }
 
 .meet-jess-text-column {
-  padding: 40px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
   line-height: 2.0;
+} */
+
+
+.meet-jess-text {
+  display: flex;
+  justify-content: space-between; /* Adds space between the columns */
+  gap: 20px; /* Space between columns */
+  align-items: stretch; /* Stretch both columns to the same height */
+}
+
+.meet-jess-text-column {
+  flex: 1; /* Ensure both columns take up equal space */
+  padding: 20px;
+  line-height: 1.8; /* Adjust line-height for readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute text evenly */
 }
 
 .custom-circle-button-atag {
@@ -114,19 +138,24 @@
   height: auto;
 }
 
-.cover-photo-about {
-  width: 100%;
+.shaded-image-cover {
+  position: relative; /* Make this container the reference for positioning the button */
+  width: 100vw;
   height: auto;
 }
 
-.shaded-image-cover .accent-text,
-.shaded-image-cover .medium-header {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  color: white;
-  text-align: center;
+.cover-photo-about {
+  width: 100%; /* Ensure the image covers the full width */
+  height: auto;
 }
+
+.custom-circle-button-atag {
+  position: absolute; /* Position the button inside the container */
+  bottom: 20px; /* Place it 20px from the bottom */
+  right: 50px; /* Place it 20px from the right */
+  z-index: 10; /* Ensure the button is on top of the image */
+}
+
 
 .accent-text {
   top: 45%; /* Position this slightly higher */
