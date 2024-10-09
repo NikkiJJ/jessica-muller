@@ -1,8 +1,3 @@
-.meet-the-chef {
-  display: flex;
-  flex-direction: column;
-}
-
 .meet-the-chef-content {
   display: flex;
   flex-direction: row;
@@ -10,36 +5,30 @@
   position: relative;
 }
 
-.navbar-overlay {
-  position: relative;
-  z-index: 10;
-}
-
+/* Ensures the container stretches full height */
 .meet-jess-left {
+  width: 40%;
+  /* position: relative;
   width: 55%;
-  position: relative;
-  margin-top: -50px; /* Reintroduce the negative margin to move the image into the navbar */
-  z-index: 1;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;  */
 }
 
-.meet-jess-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensure content is evenly spaced */
-  height: 100%; /* Stretch the content to full height */
-}
 .meet-jess {
-  position: relative; /* Keep the image positioned within its container */
   width: 100%;
-  height: calc(100% + 50px); /* Add height to extend into the navbar */
-  object-fit: cover; /* Ensure the image scales without distorting aspect ratio */
-  top: -50px; /* Align the image to move it upwards */
+  height: 100%;
+  object-fit: cover;
+
 }
 
 .meet-jess-right {
   width: 60%;
   padding: 50px;
+  padding-top: 100px;
   z-index: 5;
+  height: 100%;
 }
 
 .top-black-about {
@@ -48,19 +37,6 @@
   margin-bottom: 60px; /* Remove any margin at the bottom */
   padding-bottom: 0; /* Remove padding at the bottom */
 }
-
-/*
-.meet-jess-text {
-  display: flex;
-}
-
-.meet-jess-text-column {
-  padding-top: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
-  line-height: 2.0;
-} */
-
 
 .meet-jess-text {
   display: flex;
@@ -72,7 +48,7 @@
 .meet-jess-text-column {
   flex: 1; /* Ensure both columns take up equal space */
   padding: 20px;
-  line-height: 1.8; /* Adjust line-height for readability */
+  line-height: 2; /* Adjust line-height for readability */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Distribute text evenly */
@@ -126,6 +102,10 @@
   color: #FFBE98; /* Change text color to coral on hover */
 }
 
+.scoll-container {
+margin-bottom: 1px;
+}
+
 .button-box {
   display: flex;
   justify-content: flex-end; /* Align the button to the right */
@@ -134,12 +114,6 @@
 
 .shaded-image-cover {
   position: relative;
-  width: 100vw;
-  height: auto;
-}
-
-.shaded-image-cover {
-  position: relative; /* Make this container the reference for positioning the button */
   width: 100vw;
   height: auto;
 }

@@ -92,28 +92,26 @@ input:focus, textarea:focus {
 .custom-circle-button {
   margin-top: 65px;
   position: relative;
-  width: 120px; /* Smaller fixed width */
-  height: 120px; /* Smaller fixed height */
+  width: 120px;
+  height: 120px;
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align text to the left */
-  flex-shrink: 0; /* Prevent the button from shrinking */
+  justify-content: flex-start;
+  flex-shrink: 0;
 }
 
 .button-text {
   position: absolute;
-  left: -10px; /* Move the text further into the circle */
+  left: -10px;
   font-size: 16px;
   color: black;
   z-index: 2; /* Ensure text is above the circle */
 }
 
-
-/* Circular border with missing part */
 .custom-circle-button::before {
   content: '';
   position: absolute;
@@ -128,10 +126,15 @@ input:focus, textarea:focus {
   clip-path: inset(0 0 0 10%); /* Shorten the gap on the left */
 }
 
+/* Hover effect for both the border and the text */
 .custom-circle-button:hover::before {
   border-color: #FFBE98;
-  color: #FFBE98; /* Change border color on hover */
 }
+
+.custom-circle-button:hover .button-text {
+  color: #FFBE98; /* Change text color on hover */
+}
+
 
 @media screen and (max-width: 768px) {
   /* Adjust the contact cover for smaller screens */
