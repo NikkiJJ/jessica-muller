@@ -121,6 +121,13 @@
   border-color: #FFBE98; /* Change button border color on hover */
 }
 
+@media (min-width: 1600px) {
+  /* CSS rules for large screens go here */
+  .middle-white-right {
+    padding-top: 250px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .first-container {
     padding-top: 20px;
@@ -141,9 +148,16 @@
   }
 
   .middle-white {
-    flex-direction: column; /* Stack the content vertically */
-    align-items: center; /* Center-align the content */
-    text-align: center; /* Center-align text for mobile */
+    display: flex;
+    width: 95%;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    min-height: 100vh; /* Ensure the section takes up full viewport height */
+    padding-top: 50px;
+    padding-bottom: 50px; /* Optional, you can adjust padding for spacing */
   }
 
   .middle-white-left, .middle-white-right {

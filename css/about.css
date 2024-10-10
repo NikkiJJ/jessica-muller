@@ -61,7 +61,7 @@
   height: 120px;
   background-color: transparent;
   text-decoration: none;
-  color: white; /* Initially white text */
+  color: white;
   border: none;
   outline: none;
   cursor: pointer;
@@ -70,6 +70,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
+  margin-right: 0; /* Add margin-right to adjust placement */
 }
 
 .custom-circle-button-atag::before {
@@ -103,19 +104,22 @@
 }
 
 .scoll-container {
-margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .button-box {
+  padding-top: 150px;
   display: flex;
-  justify-content: flex-end; /* Align the button to the right */
-  width: 98%; /* Make sure the container takes up the full width */
+  justify-content: flex-end;
+  width: 100%; /* Ensure full-width */
+  position: relative; /* Relative positioning */
 }
 
 .shaded-image-cover {
   position: relative;
-  width: 100vw;
-  height: auto;
+  width: 100%;
+  height: 575px;
+  margin-bottom: 100px;
 }
 
 .cover-photo-about {
@@ -189,12 +193,14 @@ margin-bottom: 1px;
   .button-box {
     justify-content: center; /* Center the button on mobile */
     width: 100%;
+    padding-top: 80px;
   }
 
   .shaded-image-cover {
     position: relative;
     width: 100vw;
     height: auto;
+    margin-bottom: 20px;
   }
 
   .cover-photo-about {
@@ -202,25 +208,25 @@ margin-bottom: 1px;
     height: auto;
   }
 
-  .shaded-image-cover .accent-text,
+  /* .shaded-image-cover .accent-text,
   .shaded-image-cover .medium-header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     text-align: center;
-  }
+  } */
 
   /* Fix the positioning issue */
-  .shaded-image-cover .accent-text {
-    top: 25%; /* Adjust top position for smaller screens */
-    font-size: 1rem; /* Slightly smaller font for smaller screens */
+  /* .shaded-image-cover .accent-text {
+    top: 25%;
+    font-size: 1rem;
   }
 
   .shaded-image-cover .medium-header {
-    top: 45%; /* Adjust position further for smaller screens */
+    top: 45%;
     font-size: 1.5rem;
-  }
+  } */
 
 
   .cover-photo-about {
@@ -286,7 +292,7 @@ margin-bottom: 1px;
 
   .medium-header {
     position: absolute;
-    top: 45%; /* Ensure enough space between the two text elements */
+    top: 1850px; /* Ensure enough space between the two text elements */
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.8rem; /* Reduce font size */

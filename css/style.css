@@ -1,9 +1,13 @@
 html, body {
-  overflow-x: hidden;
   margin: 0 !important;
   padding: 0 !important;
   box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
+
+* {
+  box-sizing: border-box;
+}
+
 
 *, *::before, *::after {
   box-sizing: inherit; /* Ensure all elements follow the box-sizing rule */
@@ -50,6 +54,7 @@ html, body {
 body {
   font-family: 'Apercu Pro', sans-serif;
   font-size: 17px;
+  font-weight: lighter;
 }
 
 /* buttons */
