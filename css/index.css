@@ -149,14 +149,14 @@
 
   .middle-white {
     display: flex;
-    width: 95%;
+    flex-direction: column;
+    width: 96%;
     background-color: white;
     margin-right: 10px;
     margin-left: 10px;
     justify-content: center; /* Center the content vertically */
     align-items: center; /* Center the content horizontally */
     min-height: 100vh; /* Ensure the section takes up full viewport height */
-    padding-top: 50px;
     padding-bottom: 50px; /* Optional, you can adjust padding for spacing */
   }
 
