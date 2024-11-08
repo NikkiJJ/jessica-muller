@@ -36,7 +36,6 @@
 .socials {
   width: 70px;
   display: flex;
-  justify-content: space-between;
 }
 
 .techni-tag {
@@ -106,7 +105,6 @@
     justify-content: center; /* Center the social icons horizontally */
     margin-top: 10px;
     width: 70px;
-    justify-content: space-between;
     color: #000; /* Set your desired color here, e.g., black */
     text-decoration: none;
   }
