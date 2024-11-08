@@ -107,8 +107,22 @@
     margin-top: 10px;
     width: 70px;
     justify-content: space-between;
-
+    color: #000; /* Set your desired color here, e.g., black */
+    text-decoration: none;
   }
+
+  .socials a {
+    color: #000; /* Set your desired color here, e.g., black */
+    text-decoration: none;
+  }
+
+  .socials a:visited,
+  .socials a:hover,
+  .socials a:active {
+    color: #000 !important; /* Ensures color remains the same on all states */
+  }
+
+
 
   .footer-collection-img {
     width: 100%; /* Make image responsive to full width */
